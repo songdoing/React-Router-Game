@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Link} from 'react-router-dom';
 import NumberBaseball from '../numberBaseball/numberBaseballClass';
 import Rps from '../rockPaperScissors/rpsClass';
 import Lotto from '../lotto/lottoClass';
+import GameMatcher from './gameMatcher';
 
 const Games = () => {
     
