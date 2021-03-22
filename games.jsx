@@ -9,17 +9,19 @@ const Games = () => {
     return(
         <BrowserRouter>
             <div>
-                <Link to="/number-baseball">Number Baseball</Link>
+                <Link to="/game/number-baseball">Number Baseball</Link>
                 &nbsp;
-                <Link to="/rock-scissors-paper">Rock Scissors Paper</Link>
+                <Link to="/game/rock-scissors-paper">Rock Scissors Paper</Link>
                 &nbsp;
-                <Link to="/lotto-generator">Lotto Generator</Link>
+                <Link to="/game/lotto-generator">Lotto Generator</Link>
                 &nbsp;
             </div>
             <div>
-                <Route path="/number-baseball" component = {NumberBaseball}/>
+                {/* <Route path="/number-baseball" component = {NumberBaseball}/>
                 <Route path="/rock-scissors-paper" component = {Rps}/>
-                <Route path="/lotto-generator" component = {Lotto}/>
+                <Route path="/lotto-generator" component = {Lotto}/> */}
+                {/* 게임갯수가 너무 많아지면 router가 커지기 때문에 다이나믹라우트매칭 */}
+                <Route path = '/game/:name' component = {GameMatcher} />
             </div>        
         </BrowserRouter>
     );
